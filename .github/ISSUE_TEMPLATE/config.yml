@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Artie documentation
+    url: https://github.com/ArtieBots/Artie
+    about: The getting started guide, architecture overview and contribution guides.

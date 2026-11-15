@@ -1,0 +1,59 @@
+name: Bug report
+description: Something in Artie does not work the way it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. For a security problem, please don't use
+        this form - see the security policy instead.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The commands you ran, or the steps you took, from the start.
+      placeholder: |
+        1. artie-tool workspace sync
+        2. artie-tool build all
+        3. ...
+    validations:
+      required: false
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versions
+      description: |
+        The version or commit of whatever is affected. `artie-tool workspace status` shows
+        the commit of every component in your workspace; `pip show <package>` shows a
+        package's version.
+      render: text
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Your operating system, and which Artie (for example Artie00) and hardware, if relevant.
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Any error output or logs. This is formatted as code automatically.
+      render: text
+    validations:
+      required: false
